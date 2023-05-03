@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_list"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true"
+    android:layout_margin="16dp"
+    tools:context="com.contact.randeesha.MainActivity">
+
+    <EditText
+        android:id="@+id/search_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tv_back_border"
+        android:clickable="true"
+        android:textColorHint="@color/darkPrimaryDark"
+        android:textColor="@color/darkPrimaryDark"
+        android:drawableLeft="@drawable/ic_search"
+        android:hint="@string/search" />
+
+    <TextView
+        android:id="@+id/tv_my_contacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/search_names"
+        android:layout_margin="8dp"
+        android:text="@string/my_contacts" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/tv_my_contacts"
+        android:background="@color/divider" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_my_contacts"
+        android:layout_marginTop="8dp">
+
+
+        <ListView
+            android:id="@android:id/list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/search_names"
+            android:clipToPadding="false"
+            android:divider="@android:color/transparent"
+            android:paddingBottom="80dp" />
+
+        <com.github.clans.fab.FloatingActionMenu
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|right">
+
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_addContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_person_add"
+                app:fabSize="auto"
+                app:fab_label="Create New"
+                app:fab_size="mini"/>
+            <com.github.clans.fab.FloatingActionButton
+                android:id="@+id/fab_CallLogContact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:clickable="true"
+                android:src="@drawable/ic_call_log_add"
+                app:fabSize="auto"
+                app:fab_label="Create From Log"
+                app:fab_size="mini"/>
+        </com.github.clans.fab.FloatingActionMenu>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <TextView
+            android:id="@+id/tv_information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+
+        <TextView
+            android:id="@+id/ts_alphabets"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/colorAccent"
+            android:textSize="40sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+    </FrameLayout>
+
+
+</RelativeLayout>
