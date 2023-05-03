@@ -1,8 +1,8 @@
 # Contact-Manager-java
-This is a native Mobile Development, an Android application using Java
+##This is a native Mobile Development, an Android application using Java
 
 <p>
--This app is a contact manager app that is software that allows you to store and organize information about your personal and professional contacts. 
+-[This app is a contact manager app that is software that allows you to store and organize information about your personal and professional contacts.]
 -This typically includes features such as the ability to store contact details with a profile picture, contacts' names, their numbers, and email addresses. 
 -By tapping on the number and email, it will direct to their relevant paths. The location can also be located through Google Maps by tapping on the address.
 </p>
